@@ -8,4 +8,14 @@ class User < ApplicationRecord
   validates :password, presence: true, uniqueness: { case_ewnsitive: true }, length: { minimum: 8 }
 
   has_many :messages
+
+  before_create :add_linx
+
+  def add_linx
+    unless linx.present?
+      @linx = Linx.new(linx_type: self.class.name)
+      @linx.save
+      self.linx = @linx.linx
+    end
+  end
 end
