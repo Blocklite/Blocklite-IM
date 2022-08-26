@@ -12,8 +12,8 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_08_25_025735) do
   create_table "linxes", force: :cascade do |t|
-    t.string "linx", limit: 150, null: false
-    t.string "linx_type", limit: 30, null: false
+    t.string "linx"
+    t.string "linx_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["linx"], name: "index_linxes_on_linx"
