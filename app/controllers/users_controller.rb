@@ -8,9 +8,9 @@ class UsersController < ApplicationController
 	end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
-    if@user.save
+    if @user.save
       redirect to root_parh
     else
       flash[:alert] = 'Please try again'
