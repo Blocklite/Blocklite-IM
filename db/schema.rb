@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_25_025735) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_27_115811) do
   create_table "linxes", force: :cascade do |t|
     t.string "linx"
     t.string "linx_type"
@@ -36,7 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_025735) do
     t.string "email"
     t.string "password_digest"
     t.string "gender"
-    t.string "birthdate"
+    t.date "birthdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
