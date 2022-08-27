@@ -1,5 +1,5 @@
 class Linx < ApplicationRecord
-  before_create :add_linx
+	before_create :add_linx
 
   def self.valid?(linx)
     linx.instance_of?(String) && linx.starts_with?('0x') ## && linx.length == 34
