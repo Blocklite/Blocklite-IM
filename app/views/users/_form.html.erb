@@ -3,19 +3,37 @@
     <div class="column">
 			<form class="ui form">
 				<%= form_with model: @user, local: true do |f| %>
-					<%= f.text_field :last_name, autofocus: true, placeholder: "Apellido" %>
-					<%= f.text_field :first_name, autofocus: true, placeholder: "Nombre" %>
-					<%= f.telephone_field :phone, autofocus: true, placeholder: "Numero de celular" %>
-					<%= f.email_field :email, autofocus: true, placeholder: "Correo electronico" %>
-					<%= f.password_field :password, autofocus: true, placeholder: "Contrasena" %>
-					<%= f.date_field :date_of_birth %>
-					<%= f.radio_button :gender, "feminino" %>
-					<%= f.label :gender, "Feminino" %>
-					<%= f.radio_button :gender, "masculino" %>
-					<%= f.label :gender, "Masculino" %>
-					<%= f.radio_button :gender, "personalizado" %>
-					<%= f.label :gender, "Personalizado" %>
-					<%= f.submit 'Registrarse', class: "ui blue submit button" %>
+          <div class="field">
+            <div class="ui left icon input">
+              <%= f.text_field :last_name, autofocus: true, placeholder: "Last name" %>
+              <i class="user icon"></i>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <%= f.text_field :first_name, autofocus: true, placeholder: "First name" %>
+              <i class="user icon"></i>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <%= f.telephone_field :phone, autofocus: true, placeholder: "Phone" %>
+              <i class="phone icon"></i>
+            </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+            <i class="box icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <%= f.password_field :password, autofocus: true, placeholder: "Password" %>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+				<%= f.submit 'Register', class: "ui blue submit button" %>
 				<% end %>
 			</form>
     </div>
