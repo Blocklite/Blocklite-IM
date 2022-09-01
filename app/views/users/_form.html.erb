@@ -1,25 +1,24 @@
 <div class="ui placeholder segment">
   <div class="ui centered grid">
     <div class="column">
-			<form class="ui form">
-				<%= form_with model: @user, local: true do |f| %>
-          <div class="field">
-            <div class="ui left icon input">
-              <%= f.text_field :last_name, autofocus: true, placeholder: "Last name" %>
-              <i class="user icon"></i>
-            </div>
+			<%= form_with model: @user, url: register_path do |f| %>
+        <div class="field">
+          <div class="ui left icon input">
+            <%= f.text_field :last_name, autofocus: true, placeholder: "Last name" %>
+            <i class="user icon"></i>
           </div>
-          <div class="field">
-            <div class="ui left icon input">
-              <%= f.text_field :first_name, autofocus: true, placeholder: "First name" %>
-              <i class="user icon"></i>
-            </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <%= f.text_field :first_name, autofocus: true, placeholder: "First name" %>
+            <i class="user icon"></i>
           </div>
-          <div class="field">
-            <div class="ui left icon input">
-              <%= f.telephone_field :phone, autofocus: true, placeholder: "Phone" %>
-              <i class="phone icon"></i>
-            </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <%= f.telephone_field :phone, autofocus: true, placeholder: "Phone" %>
+            <i class="phone icon"></i>
+          </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
@@ -34,8 +33,7 @@
           </div>
         </div>
 				<%= f.submit 'Register', class: "ui blue submit button" %>
-				<% end %>
-			</form>
+			<% end %>
     </div>
   </div>
 </div>
